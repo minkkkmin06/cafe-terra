@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>CAFE : TERRA - About Us</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f1eb;
+            color: #3a2e21;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        header {
+            background: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #4b3f2f;
+        }
+
+        header h1:hover {
+            color: #7b5e3d;
+        }
+
+        header a {
+            text-decoration: none;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4b3f2f;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #7b5e3d;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .tabs input[type="radio"] {
+            display: none;
+        }
+
+        .tabs label {
+            flex: 1 1 30%;
+            min-width: 150px;
+            max-width: 200px;
+            padding: 10px 20px;
+            background-color: #d6c7b4;
+            color: #3a2e21;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .tabs input[type="radio"]:checked+label {
+            background-color: #7b5e3d;
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+            padding-top: 10px;
+            width: 100%;
+        }
+
+        #tab1:checked~#content1,
+        #tab2:checked~#content2,
+        #tab3:checked~#content3 {
+            display: block;
+        }
+
+        .cafe {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .cafe h3 {
+            margin-top: 0;
+            color: #4b3f2f;
+        }
+
+        .cafe p {
+            margin: 5px 0;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .menu-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .menu-card .info {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu-card .info h4 {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #4b3f2f;
+        }
+
+        .menu-card .info span {
+            font-size: 13px;
+            font-weight: bold;
+            color: #7b5e3d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../메인페이지.html">
+            <h1>CAFE : TERRA</h1>
+        </a>
+        <nav>
+            <a href="../place.html">Place</a>
+            <a href="../menu.html">Menu</a>
+            <a href="../aboutus.html">About Us</a>
+            <a href="../feedback.html">Feedback</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>성북구 추천 카페</h2>
+
+        <div class="tabs">
+            <input type="radio" name="tab" id="tab1" checked>
+            <label for="tab1">오버스토리</label>
+
+            <input type="radio" name="tab" id="tab2">
+            <label for="tab2">Moture</label>
+
+            <input type="radio" name="tab" id="tab3">
+            <label for="tab3">유목커피바</label>
+
+            <!-- 카페1 정보 -->
+            <div id="content1" class="tab-content">
+                <div class="cafe">
+                    <h3>오버스토리</h3>
+                    <hr>
+                    <iframe title="오버스토리 위치 보기" src="https://kko.kakao.com/TMz39w7eHG" width="100%" height="300"
+                        style="border:0; border-radius:10px; margin-top:10px;" allowfullscreen></iframe>
+                    <p><strong>위치:</strong> 서울 성북구 선잠로2다길 13-13 지하1층</p>
+                    <p><strong>시그니처 메뉴:</strong> 시그니처바닐라라떼, 말차딸기브라우니, 아포가토 </p>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="https://ldb-phinf.pstatic.net/20240410_167/1712758251316GA9a8_JPEG/IMG_1786.jpeg"
+                                alt="시그니처바닐라라떼">
+                            <div class="info">
+                                <h4>시그니처바닐라라떼</h4>
+                                <span>₩9,000</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://ldb-phinf.pstatic.net/20210318_70/1616051213636b0MgM_JPEG/4ANZnTCUEFhLLVC6RnxLP4Qp.jpeg.jpg"
+                                alt="말차딸기브라우니">
+                            <div class="info">
+                                <h4>말차딸기브라우니</h4>
+                                <span>₩11,000</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://ldb-phinf.pstatic.net/20200715_133/1594787118376r4Gxc_PNG/R45nHHteJ6qkesFUxVv-YMAi.png"
+                                alt="아포가토">
+                            <div class="info">
+                                <h4>아포가토</h4>
+                                <span>₩10,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 카페2 정보 -->
+                <div id="content2" class="tab-content">
+                    <div class="cafe">
+                        <h3>Moture</h3>
+                        <hr>
+                        <iframe title="Moture 위치 보기" src="https://kko.kakao.com/BIFCQrdtR4" width="100%" height="300"
+                            style="border:0; border-radius:10px; margin-top:10px;" allowfullscreen></iframe>
+                        <p><strong>위치:</strong> 서울 성북구 동소문로13가길 73 1층</p>
+                        <p><strong>시그니처 메뉴:</strong> 스페셜티 필터커피, 솔티아인슈페너, 더치블랙 </p>
+                        <div class="menu-grid">
+                            <div class="menu-card">
+                                <img src="https://ldb-phinf.pstatic.net/20240503_207/1714703229685w5S9I_JPEG/20240503_112117.jpg"
+                                    alt="스페셜티 필터커피">
+                                <div class="info">
+                                    <h4>스페셜티 필터커피</h4>
+                                    <span>₩변동</span>
+                                </div>
+                            </div>
+                            <div class="menu-card">
+                                <img src="https://ldb-phinf.pstatic.net/20230403_77/1680489429916QJHu0_JPEG/20221115_115632.jpg"
+                                    alt="솔티아인슈페너">
+                                <div class="info">
+                                    <h4>솔티아인슈페너</h4>
+                                    <span>₩5,000</span>
+                                </div>
+                            </div>
+                            <div class="menu-card">
+                                <img src="https://ldb-phinf.pstatic.net/20221101_262/1667286783161jupRe_JPEG/Dutch_Black%2815cm%29.jpg"
+                                    alt="더치블랙">
+                                <div class="info">
+                                    <h4>더치블랙</h4>
+                                    <span>₩4,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 카페3 정보 -->
+                <div id="content3" class="tab-content">
+                    <div class="cafe">
+                        <h3>유목커피바</h3>
+                        <hr>
+                        <iframe title="해로커피 위치 보기" src="https://kko.kakao.com/mmhSq6_q7Z" width="100%" height="300"
+                            style="border:0; border-radius:10px; margin-top:10px;" allowfullscreen></iframe>
+                        <p><strong>위치:</strong> 서울 성북구 동소문로24길 47 1,2층</p>
+                        <p><strong>시그니처 메뉴:</strong> 에스프레소, 아인슈페너, 플랫화이트 </p>
+                        <div class="menu-grid">
+                            <div class="menu-card">
+                                <img src="https://ldb-phinf.pstatic.net/20211226_216/1640512737948Irjgy_JPEG/F2B8B5EA-035A-4766-968B-E0A6EAC68974.jpeg"
+                                    alt="에스프레소">
+                                <div class="info">
+                                    <h4>에스프레소</h4>
+                                    <span>₩5,000</span>
+                                </div>
+                            </div>
+                            <div class="menu-card">
+                                <img src="https://ldb-phinf.pstatic.net/20211227_15/1640614295195m6iWI_JPEG/B9F5EA55-5251-4F2E-8026-00313892C738.jpeg"
+                                    alt="아인슈페너">
+                                <div class="info">
+                                    <h4>아인슈페너</h4>
+                                    <span>₩6,500</span>
+                                </div>
+                            </div>
+                            <div class="menu-card">
+                                <img src="https://ldb-phinf.pstatic.net/20211227_22/1640614271109Fzn5J_JPEG/870D559E-ED1D-4233-B063-1E28B9A84F48.jpeg"
+                                    alt="플랫화이트">
+                                <div class="info">
+                                    <h4>플랫화이트</h4>
+                                    <span>₩5,500</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

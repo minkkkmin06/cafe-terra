@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>CAFE : TERRA - About Us</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f1eb;
+            color: #3a2e21;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        header {
+            background: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #4b3f2f;
+        }
+
+        header h1:hover {
+            color: #7b5e3d;
+        }
+
+        header a {
+            text-decoration: none;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4b3f2f;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #7b5e3d;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .tabs input[type="radio"] {
+            display: none;
+        }
+
+        .tabs label {
+            flex: 1 1 30%;
+            min-width: 150px;
+            max-width: 200px;
+            padding: 10px 20px;
+            background-color: #d6c7b4;
+            color: #3a2e21;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .tabs input[type="radio"]:checked+label {
+            background-color: #7b5e3d;
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+            padding-top: 10px;
+            width: 100%;
+        }
+
+        #tab1:checked~#content1,
+        #tab2:checked~#content2,
+        #tab3:checked~#content3 {
+            display: block;
+        }
+
+        .cafe {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .cafe h3 {
+            margin-top: 0;
+            color: #4b3f2f;
+        }
+
+        .cafe p {
+            margin: 5px 0;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .menu-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .menu-card .info {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu-card .info h4 {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #4b3f2f;
+        }
+
+        .menu-card .info span {
+            font-size: 13px;
+            font-weight: bold;
+            color: #7b5e3d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../메인페이지.html">
+            <h1>CAFE : TERRA</h1>
+        </a>
+        <nav>
+            <a href="../place.html">Place</a>
+            <a href="../menu.html">Menu</a>
+            <a href="../aboutus.html">About Us</a>
+            <a href="../feedback.html">Feedback</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>강북구 추천 카페</h2>
+
+        <div class="tabs">
+            <input type="radio" name="tab" id="tab1" checked>
+            <label for="tab1">하이그라운드 제빵소</label>
+
+            <input type="radio" name="tab" id="tab2">
+            <label for="tab2">카페 산아래</label>
+
+            <input type="radio" name="tab" id="tab3">
+            <label for="tab3">전광수커피하우스 북한산점</label>
+
+            <!-- 카페1 정보 -->
+            <div id="content1" class="tab-content">
+                <div class="cafe">
+                    <h3>하이그라운드 제빵소</h3>
+                    <hr>
+                    <iframe title="하이그라운드 제빵소 위치보기" src="https://kko.kakao.com/jK9eFWICnt" width="100%" height="300"
+                        style="border:0; border-radius:10px; margin-top:10px;" allowfullscreen></iframe>
+                    <p><strong>위치:</strong> 서울시 강북구</p>
+                    <p><strong>시그니처 메뉴:</strong> 어니언베이글, 아메리카노, 북한산 쑥 라떼</p>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/5yHTpFHN/20250606154250.png" alt="어니언베이글">
+                            <div class="info">
+                                <h4>어니언베이글</h4>
+                                <span>₩6,000</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/Rhj8YVf1/20250606154154.png" alt="아메리카노">
+                            <div class="info">
+                                <h4>아메리카노</h4>
+                                <span>₩6,000</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/rmZ7S9wP/20250606154238.png" alt="북한산 쑥 라떼">
+                            <div class="info">
+                                <h4>북한산 쑥 라떼</h4>
+                                <span>₩6,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 카페2 정보 -->
+            <div id="content2" class="tab-content">
+                <div class="cafe">
+                    <h3>카페 산아래</h3>
+                    <hr>
+                    <iframe title="카페 산아래 위치 보기" src="https://kko.kakao.com/T1H2mYRYtH" width="100%" height="300"
+                        style="border:0; border-radius:10px; margin-top:10px;" allowfullscreen></iframe>
+                    <p><strong>위치:</strong> 서울시 강북구</p>
+                    <p><strong>시그니처 메뉴:</strong> 아이스라떼, 바스크 치즈케이크, 아이스크림 크로플</p>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/bdfDLWyC/20250606154825.png" alt="아이스라떼">
+                            <div class="info">
+                                <h4>아이스라떼</h4>
+                                <span>₩6,000</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/2yZLQrDL/20250606154833.png" alt="바스크 치즈케이크">
+                            <div class="info">
+                                <h4>바스크 치즈케이크</h4>
+                                <span>₩7,500</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/hjw7QhHq/20250606154839.png" alt="아이스크림 크로플">
+                            <div class="info">
+                                <h4>아이스크림 크로플</h4>
+                                <span>₩8,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 카페3 정보 -->
+            <div id="content3" class="tab-content">
+                <div class="cafe">
+                    <h3>전광수커피하우스</h3>
+                    <hr>
+                    <iframe title="전광수커피하우스 위치 보기" src="https://kko.kakao.com/dCodwvPIsY" width="100%" height="300"
+                        style="border:0; border-radius:10px; margin-top:10px;" allowfullscreen></iframe>
+                    <p><strong>위치:</strong> 서울시 강북구</p>
+                    <p><strong>시그니처 메뉴:</strong> 꿀밤케이크, 밀크티, 오늘의커피</p>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/dtyssPg7/20250606155821.png" alt="꿀밤케이크">
+                            <div class="info">
+                                <h4>꿀밤케이크</h4>
+                                <span>₩6,500</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/fy6McBST/20250606155846.png" alt="밀크티">
+                            <div class="info">
+                                <h4>밀크티</h4>
+                                <span>₩6,000</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/MZ4ZJK32/20250606155812.png" alt="오늘의커피">
+                            <div class="info">
+                                <h4>오늘의커피</h4>
+                                <span>₩5,500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

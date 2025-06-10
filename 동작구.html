@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>CAFE : TERRA - About Us</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f1eb;
+            color: #3a2e21;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        header {
+            background: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #4b3f2f;
+        }
+
+        header h1:hover {
+            color: #7b5e3d;
+        }
+
+        header a {
+            text-decoration: none;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4b3f2f;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #7b5e3d;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .tabs input[type="radio"] {
+            display: none;
+        }
+
+        .tabs label {
+            flex: 1 1 30%;
+            min-width: 150px;
+            max-width: 200px;
+            padding: 10px 20px;
+            background-color: #d6c7b4;
+            color: #3a2e21;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .tabs input[type="radio"]:checked+label {
+            background-color: #7b5e3d;
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+            padding-top: 10px;
+            width: 100%;
+        }
+
+        #tab1:checked~#content1,
+        #tab2:checked~#content2,
+        #tab3:checked~#content3 {
+            display: block;
+        }
+
+        .cafe {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .cafe h3 {
+            margin-top: 0;
+            color: #4b3f2f;
+        }
+
+        .cafe p {
+            margin: 5px 0;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .menu-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .menu-card .info {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu-card .info h4 {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #4b3f2f;
+        }
+
+        .menu-card .info span {
+            font-size: 13px;
+            font-weight: bold;
+            color: #7b5e3d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../메인페이지.html">
+            <h1>CAFE : TERRA</h1>
+        </a>
+        <nav>
+            <a href="../place.html">Place</a>
+            <a href="../menu.html">Menu</a>
+            <a href="../aboutus.html">About Us</a>
+            <a href="../feedback.html">Feedback</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>동작구 추천 카페</h2>
+
+        <div class="tabs">
+            <input type="radio" name="tab" id="tab1" checked>
+            <label for="tab1">딥다이브</label>
+
+            <input type="radio" name="tab" id="tab2">
+            <label for="tab2">파세로에스프레소</label>
+
+            <input type="radio" name="tab" id="tab3">
+            <label for="tab3">잔디 속에 있다고 상상을 해 </label>
+
+            <div id="content1" class="tab-content">
+                <div class="cafe">
+                    <h3>딥다이브</h3>
+                    <hr>
+
+                    <iframe title="예커피" src="https://kko.kakao.com/OGPie9Rnsy" width="100%" height="300"
+                        style="border:0; border-radius:10px; margin-top:10px;" allowfullscreen></iframe>
+
+                    <p><strong>위치:</strong> 서울 동작구 사당로 302 1층</p>
+                    <p><strong>시그니처 메뉴:</strong> 피스타치오 크림라떼, 코코넛 커피 스무디, 얼그레이 크림라떼</p>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/rzXCmyb6/image.png" alt="라떼">
+                            <div class="info">
+                                <h4>피스타치오 크림라떼</h4>
+                                <span>₩7,200</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/pTSJwJJL/image.png" alt="라떼">
+                            <div class="info">
+                                <h4>코코넛커피 스무디</h4>
+                                <span>₩6,800</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/Bb1B4Pmc/image.png" alt="티라미수">
+                            <div class="info">
+                                <h4>얼그레이 크림라떼 </h4>
+                                <span>₩7,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content2" class="tab-content">
+                <div class="cafe">
+                    <h3>파세로 에스프레소</h3>
+                    <hr>
+                    <iframe title="그린빈 위치 보기" src="https://kko.kakao.com/dCvzLr2W0e" width="100%" height="300"
+                        style="border:0; border-radius:10px; margin-top:10px;" allowfullscreen></iframe>
+                    <p><strong>위치:</strong> 서울 동작구 여의대방로24나길 10-2 1층 파세로 에스프레소바</p>
+                    <p><strong>메뉴:</strong> espresso, Pino, conpanna</p>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/WpQQrGcV/image.jpg" alt="콜드브루">
+                            <div class="info">
+                                <h4>espresso</h4>
+                                <span>₩2,500</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/T3xFNTPH/Pino.jpg" alt="브라우니">
+                            <div class="info">
+                                <h4>pino </h4>
+                                <span>₩3,000</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/4NVj1YX9/conpanna.jpg" alt="브라우니">
+                            <div class="info">
+                                <h4>conpanna</h4>
+                                <span>₩3,500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content3" class="tab-content">
+                <div class="cafe">
+                    <h3>잔디 속에 있다고 상상을 해 </h3>
+                    <hr>
+                    <iframe title="브라운하우스 위치 보기" src="https://kko.kakao.com/Rz41TDclb8" width="100%" height="300"
+                        style="border:0; border-radius:10px;margin-top:10px;" allowfullscreen></iframe>
+                    <p><strong>위치:</strong> 서울 동작구 상도로 265-30 2층</p>
+                    <p><strong>메뉴:</strong> 오렌지비앙코, 솔트커피, 바질 토마토 에이드 </p>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/k5nsK45q/image.jpg" alt="드립커피">
+                            <div class="info">
+                                <h4>오렌지비앙코</h4>
+                                <span>₩6,200</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/vm3zzs19/image.jpg" alt="샌드위치">
+                            <div class="info">
+                                <h4>솔트커피</h4>
+                                <span>₩5,800</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/gJjKtTR7/2.jpg" alt="케이크">
+                            <div class="info">
+                                <h4>바질토마토에이드 </h4>
+                                <span>₩6,200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

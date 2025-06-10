@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>CAFE : TERRA - About Us</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f1eb;
+            color: #3a2e21;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        header {
+            background: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #4b3f2f;
+        }
+
+        header h1:hover {
+            color: #7b5e3d;
+        }
+
+        header a {
+            text-decoration: none;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4b3f2f;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #7b5e3d;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .tabs input[type="radio"] {
+            display: none;
+        }
+
+        .tabs label {
+            flex: 1 1 30%;
+            min-width: 150px;
+            max-width: 200px;
+            padding: 10px 20px;
+            background-color: #d6c7b4;
+            color: #3a2e21;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .tabs input[type="radio"]:checked+label {
+            background-color: #7b5e3d;
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+            padding-top: 10px;
+            width: 100%;
+        }
+
+        #tab1:checked~#content1,
+        #tab2:checked~#content2,
+        #tab3:checked~#content3 {
+            display: block;
+        }
+
+        .cafe {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .cafe h3 {
+            margin-top: 0;
+            color: #4b3f2f;
+        }
+
+        .cafe p {
+            margin: 5px 0;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .menu-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .menu-card .info {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu-card .info h4 {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #4b3f2f;
+        }
+
+        .menu-card .info span {
+            font-size: 13px;
+            font-weight: bold;
+            color: #7b5e3d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../메인페이지.html">
+            <h1>CAFE : TERRA</h1>
+        </a>
+        <nav>
+            <a href="../place.html">Place</a>
+            <a href="../menu.html">Menu</a>
+            <a href="../aboutus.html">About Us</a>
+            <a href="../feedback.html">Feedback</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>관악구 추천 카페</h2>
+
+        <div class="tabs">
+            <input type="radio" name="tab" id="tab1" checked>
+            <label for="tab1">발루토커피 신림점</label>
+
+            <input type="radio" name="tab" id="tab2">
+            <label for="tab2">안밀</label>
+
+            <input type="radio" name="tab" id="tab3">
+            <label for="tab3">폼앤노말</label>
+
+            <!-- 카페1 정보 -->
+            <div id="content1" class="tab-content">
+                <div class="cafe">
+                    <h3>발루토커피 신림점</h3>
+                    <hr>
+                    <iframe title="발루토커피 신림점 위치 보기" src="https://kko.kakao.com/5K34RW4cKJ" width="100%" height="300"
+                        style="border:0; border-radius:10px; margin-top:10px;" allowfullscreen></iframe>
+                    <p><strong>위치:</strong> 서울시 관악구</p>
+                    <p><strong>시그니처 메뉴:</strong> 말차갸또쇼콜라, 아메리카노, 쑥 크럼블 케이크</p>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/fLstX70N/20250606163613.png" alt="말차갸또쇼콜라">
+                            <div class="info">
+                                <h4>말차갸또쇼콜라</h4>
+                                <span>₩5,500</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/PxMLMLm8/20250606163607.png" alt="아메리카노">
+                            <div class="info">
+                                <h4>아메리카노</h4>
+                                <span>₩6,000</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/43VHm2yP/20250606163818.png" alt="쑥 크럼블 케이크">
+                            <div class="info">
+                                <h4>쑥 크럼블 케이크</h4>
+                                <span>₩6,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 카페2 정보 -->
+            <div id="content2" class="tab-content">
+                <div class="cafe">
+                    <h3>안밀</h3>
+                    <hr>
+                    <iframe title="안밀 위치 보기" src="https://kko.kakao.com/SHszqK3tKr" width="100%" height="300"
+                        style="border:0; border-radius:10px; margin-top:10px;" allowfullscreen></iframe>
+                    <p><strong>위치:</strong> 서울시 관악구</p>
+                    <p><strong>시그니처 메뉴:</strong> 필터커피, 쑥 녹차 티라미수, 아메리카노</p>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/J49kMH5j/20250606164802.png" alt="필터커피">
+                            <div class="info">
+                                <h4>필터커피</h4>
+                                <span>₩4,500</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/jSPJ5qMm/20250606164809.png" alt="쑥 녹차 티라미수">
+                            <div class="info">
+                                <h4>쑥 녹차 티라미수</h4>
+                                <span>₩6,500</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/fbsS04FL/20250606164914.png" alt="아메리카노">
+                            <div class="info">
+                                <h4>아메리카노</h4>
+                                <span>₩4,500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 카페3 정보 -->
+            <div id="content3" class="tab-content">
+                <div class="cafe">
+                    <h3>폼앤노말</h3>
+                    <hr>
+                    <iframe title="폼앤노말 위치 보기" src="https://kko.kakao.com/bR_ye-kMMN" width="100%" height="300"
+                        style="border:0; border-radius:10px; margin-top:10px;" allowfullscreen></iframe>
+                    <p><strong>위치:</strong> 서울시 관악구</p>
+                    <p><strong>시그니처 메뉴:</strong> 아인슈페너, 패션후르츠 에이드, 멜팅 바스크 치즈케이크</p>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/mgs6hkbF/20250606165230.png" alt="아인슈페너">
+                            <div class="info">
+                                <h4>아인슈페너</h4>
+                                <span>₩6,500</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/bw9VnPJV/20250606165234.png" alt="패션후르츠 에이드">
+                            <div class="info">
+                                <h4>패션후르츠 에이드</h4>
+                                <span>₩6,500</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://i.postimg.cc/HLWZ4N8Y/20250606165239.png" alt="멜팅 바스크 치즈케이크">
+                            <div class="info">
+                                <h4>멜팅 바스크 치즈케이크</h4>
+                                <span>₩6,500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
