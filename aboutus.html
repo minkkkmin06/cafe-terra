@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAFE : TERRA - About Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f1eb;
+      color: #3a2e21;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #4b3f2f;
+    }
+
+    header h1:hover {
+      color: #7b5e3d;
+    }
+
+    header a {
+      text-decoration: none;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #4b3f2f;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #7b5e3d;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      justify-items: center;
+    }
+
+    .bio {
+      text-align: center;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      padding: 28px 22px 20px;
+      margin-bottom: 20px;
+      width: 96%;
+      max-width: 470px;
+    }
+
+    .bio h3 {
+      margin-top: 8px;
+      margin-bottom: 16px;
+      font-size: 22px;
+      color: #3a2e21;
+      letter-spacing: 1px;
+    }
+
+    .bio img {
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      margin-bottom: 16px;
+      opacity: 0;
+      transform: translateX(150px);
+      animation: imageInX 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .main-animate {
+      animation-delay: 0s;
+    }
+
+    .main-animate.delay1 {
+      animation-delay: 0.3s;
+    }
+
+    .main-animate.delay2 {
+      animation-delay: 0.6s;
+    }
+
+    .main-animate.delay3 {
+      animation-delay: 0.9s;
+    }
+
+    .main-animate.delay4 {
+      animation-delay: 1.2s;
+    }
+
+    .bio p {
+      text-align: left;
+      margin: 0 0 1em 0;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #4b3f2f;
+      display: block;
+      width: 100%;
+      max-width: 380px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bio p strong {
+      color: #6e4b23;
+    }
+
+    @keyframes imageInX {
+      from {
+        opacity: 0;
+        transform: translateX(150px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        padding: 15px 10px;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        text-align: center;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 7px;
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 30px 8px;
+        max-height: 100vh;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .bio {
+        padding: 16px 7px 10px;
+        max-width: 96vw;
+      }
+
+      .bio img {
+        width: 110px;
+        height: 110px;
+      }
+
+      .bio p {
+        max-width: 96vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="메인페이지.html">
+      <h1>CAFE : TERRA</h1>
+    </a>
+    <nav>
+      <a href="place.html">Place</a>
+      <a href="menu.html">Menu</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>About the Developers</h2>
+    <div class="team">
+      <div class="bio">
+        <img class="main-animate" src="https://i.pinimg.com/736x/67/92/08/67920869f11b4dc09d1e4df45f7f61e9.jpg"
+          alt="신민경">
+        <h3>신민경</h3>
+        <p><strong>역할 :</strong> 주 페이지 애니메이션 추가, 자치구별 카페 서브 페이지, 발표 PPT 제작</p>
+        <p><strong>아쉬운 점 :</strong> 처음에 기획해 보고 생각해 본 기능들을 모두 구현하기엔 시간이 부족했던 점이 가장 아쉬웠습니다. 다음 기회에는 다양한 요소를 활용해 웹페이지를 제작해
+          보고 싶습니다.</p>
+        <p><strong>좋았던 점 :</strong> 이론으로 배운 웹 기술들을 실습으로 실제로 적용해 보고, 하나의 완성된 결과물을 만들어낸 경험이 매우 뜻깊었습니다. 특히 팀원들과 협업하며 의견을
+          조율하고 각자의 작업을 통합해 가는 과정에서 개발의 재미와 뿌듯함을 크게 느꼈습니다.</p>
+        <p><strong>하고 싶은 것 :</strong> 이번 활동을 계기로 웹 개발에 더 큰 흥미를 느끼게 되었고, 프로젝트 이후에 웹 개발과 관련된 공부나 실습을 더 해보고 싶다고 생각했습니다.</p>
+      </div>
+      <div class="bio">
+        <img class="main-animate delay1" src="https://i.postimg.cc/8PszPQg5/image.jpg" alt="윤정연">
+        <h3>윤정연</h3>
+        <p><strong>역할 :</strong> 서울의 구로구, 금천구, 노원구, 도봉구, 동작구, 동대문구에 있는 카페들을 조사한 뒤, 그 정보를 바탕으로 카페 추천 페이지를 제작했습니다. 카페명과
+          위치, 대표 메뉴를 이미지로 정리해서 보기 쉽게 구성했고, 사용자들이 참고하기 좋도록 시각적인 요소도 고려해 페이지를 만들었습니다. 또한, 추천한 카페들을 한눈에 볼 수 있도록 정리한 카페 모음
+          페이지도 추가로 제작하여 전체적인 구성을 정리했습니다.</p>
+        <p><strong>아쉬운 점 :</strong> 조금 더 다양한 요소들을 활용하지 못한 게 아쉽고 카페에 직접 방문해서 느낀 점이나 사진을 함께 추가했으면 더 풍부했을 텐데, 그러지 못한 점이
+          아쉬웠습니다.</p>
+        <p><strong>좋았던 점 :</strong> 서울에 이렇게 다양한 분위기의 카페가 있다는 걸 새롭게 알게 됐고, 웹페이지를 직접 만들면서 정보를 정리하는 과정이 재미있었어요. 내가 만든 걸
+          누군가가 보고 참고할 수 있다는 점도 뿌듯했습니다!</p>
+        <p><strong>하고 싶은 것 :</strong> 정리했던 카페 중 가보고 싶은 곳이 많아서 실제로 가서 직접 찍은 사진이나 경험을 더해서 페이지를 보완해도 좋을 것 같습니다.</p>
+      </div>
+      <div class="bio">
+        <img class="main-animate delay2" src="https://i.postimg.cc/D04bbbXQ/image.png" alt="유지원">
+        <h3>유지원</h3>
+        <p><strong>역할 :</strong> 서브 페이지, 메뉴페이지</p>
+        <p><strong>아쉬운 점 :</strong> 몇 가지 요소를 추가하지 못한 것이 아쉬웠습니다.</p>
+        <p><strong>좋았던 점 :</strong> 팀으로 코드를 처음 함께 짜 본 점이 좋았습니다.</p>
+        <p><strong>하고 싶은 것 :</strong> 게임이 하고 싶습니다.</p>
+      </div>
+      <div class="bio">
+        <img class="main-animate delay3" src="https://i.postimg.cc/yYZqkttS/image.jpg" alt="이소현">
+        <h3>이소현</h3>
+        <p><strong>역할 :</strong> 메인페이지, 서브 페이지, 개발자 소개 페이지</p>
+        <p><strong>아쉬운 점 :</strong> 시간이 부족해서 웹페이지에 요소를 더 추가 못한 게 아쉽습니다.</p>
+        <p><strong>좋았던 점 :</strong> 자체 제작 웹페이지를 만들어보는 경험이 새로워서 좋았습니다.</p>
+        <p><strong>하고 싶은 것 :</strong> 이틀 동안 하루 12시간씩 총 24시간 자고 싶습니다.</p>
+      </div>
+      <div class="bio">
+        <img class="main-animate delay4" src="https://i.postimg.cc/DZ9cczhb/5047b70d1319479bd67532ca0bc22036.png"
+          alt="이시헌">
+        <h3>이시헌</h3>
+        <p><strong>역할 :</strong> 메인 페이지, 서브 페이지, 지역구 페이지, 발표, 미디어 소스 편집</p>
+        <p><strong>아쉬운 점 :</strong> 여러 강의의 조별 과제가 동시에 겹쳐서 정성을 쏟지 못했습니다.</p>
+        <p><strong>좋았던 점 :</strong> 조원분들이 다들 적극적이셔서 제작이 힘들지 않았습니다.</p>
+        <p><strong>하고 싶은 것 :</strong> 잠 좀 자고 싶습니다.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAFE : TERRA</title>
+  <link rel="stylesheet" href="메인페이지.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="logo">CAFE : TERRA</div>
+    <div class="iconcenter">
+      <div class="emptybox"></div>
+      <div class="coffee-icon">
+        <img src="https://th.bing.com/th/id/OIP.9u2r4bzI2iuRxXQBywSccwHaHa?w=190&h=190&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+          alt="Coffee cup">
+      </div>
+    </div>
+    <nav>
+      <a href="place.html">Place</a>
+      <a href="menu.html">Menu</a>
+      <a href="aboutus.html" class="aboutus">About Us</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <div class="slider-container" id="slider-container">
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+
+    <div class="slider">
+      <div class="slides">
+        <div class="slide"><img src="지역구/카페사진파일/카페테라.gif" alt="Slide 1"></div>
+        <div class="slide"><img src="지역구/카페사진파일/찾아라.gif" alt="Slide 2"></div>
+        <div class="slide"><img src="지역구/카페사진파일/커피.gif" alt="Slide 3"></div>
+      </div>
+    </div>
+
+    <div class="radioselect">
+      <label for="slide1" class="rad-button"></label>
+      <label for="slide2" class="rad-button"></label>
+      <label for="slide3" class="rad-button"></label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <audio id="jazz" src="지역구/pop.mp3" autoplay loop controls></audio>
+    </div>
+  </div>
+
+  <div class="box"></div>
+
+  <br><br><br>
+  <a href="#place">
+    <button class="section-divider-btn">↓</button>
+  </a>
+
+    <div class="box"></div>
+
+  <section class="section" id="place">
+    <h2>우리 동네의 숨겨진 카페</h2>
+    <p>서울의 각 구마다 자연을 닮은 감성 카페 3곳을 소개합니다.</p>
+    <div class="card-list">
+      <a href="지역구/서초구.html">
+        <div class="card">
+          <img
+            src="https://ldb-phinf.pstatic.net/20240201_137/1706778342286X4zwc_JPEG/%C7%D8%C4%A1%C5%A9%B8%B2%B6%F3%B6%BC.jpg"
+            alt="Cafe 1" />
+          <h3>서초구</h3>
+          <h4>카페 이로</h4>
+        </div>
+      </a>
+      <a href="지역구/마포구.html">
+        <div class="card">
+          <img
+            src="https://ldb-phinf.pstatic.net/20220607_182/1654587823057Kuh03_JPEG/D354471B-1611-42DF-846A-45F6DA065411.jpeg"
+            alt="Cafe 2" />
+          <h3>마포구</h3>
+          <h4>그로토</h4>
+        </div>
+      </a>
+      <a href="지역구/서대문구.html">
+        <div class="card">
+          <img
+            src="https://ldb-phinf.pstatic.net/20240313_95/1710318466583aGQug_JPEG/Screenshot_20240313_114013_Instagram.jpg"
+            alt="Cafe 3" />
+          <h3>서대문구</h3>
+          <h4>스웨이커피스테이션</h4>
+        </div>
+      </a>
+    </div>
+    <br><br>
+
+    <input type="checkbox" id="toggle-iframe" hidden>
+    <label class="btn" for="toggle-iframe">26개 구 전체 보기</label>
+
+    <div class="iframe-container" id="iframe-container">
+      <iframe src="place-content.html"></iframe>
+    </div>
+  </section>
+
+  <div class="box"></div>
+
+  <a href="#menu">
+    <button class="section-divider-btn">↓</button>
+  </a>
+
+  <div class="box"></div>
+
+  <section class="section" id="menu">
+    <h2>메뉴 소개</h2>
+    <p>어디서도 본 적 없는 시그니처 메뉴, 궁금하지 않나요?</p>
+    <div class="card-list">
+      <a href="지역구/구로구.html">
+        <div class="card">
+          <img src="메뉴 사진/메뉴 분홍반지.png" alt="분홍반지" />
+          <h3>분홍반지</h3>
+        </div>
+      </a>
+      <a href="지역구/노원구.html">
+        <div class="card">
+          <img src="메뉴 사진/메뉴 런던포그.png" alt="롱블랙" />
+          <h3>런던포그</h3>
+        </div>
+      </a>
+      <a href="지역구/노원구.html">
+        <div class="card">
+          <img src="메뉴 사진/메뉴 오레그랏세.png" alt="오레그랏세" />
+          <h3>오레그랏세</h3>
+        </div>
+      </a>
+    </div>
+    <br><br>
+    <button class="btn" onclick="window.open('menu.html', '_blank')">전체 메뉴 보기</button>
+  </section>
+
+  <div class="box"></div>
+
+  <a href="#aboutus">
+    <button class="section-divider-btn">↓</button>
+  </a>
+
+  <div class="box"></div>
+
+  <section class="section" id="aboutus">
+    <div class="developer-intro">
+      <h2>개발자 소개</h2>
+      <div class="photos-row">
+        <img src="https://i.pinimg.com/736x/67/92/08/67920869f11b4dc09d1e4df45f7f61e9.jpg" class="circle-photo"
+          alt="dev1">
+        <img src="https://i.postimg.cc/8PszPQg5/image.jpg" class="circle-photo" alt="dev2">
+        <img src="https://i.postimg.cc/D04bbbXQ/image.png" class="circle-photo" alt="dev3">
+        <img src="https://i.postimg.cc/yYZqkttS/image.jpg" class="circle-photo" alt="dev4">
+        <img src="https://i.postimg.cc/DZ9cczhb/5047b70d1319479bd67532ca0bc22036.png" class="circle-photo" alt="dev5">
+      </div>
+    </div>
+    <br>
+    <p>이 웹사이트는 커피와 공간을 사랑하는 웹 개발자에 의해 만들어졌습니다.</p>
+    <br>
+    <button class="btn" onclick="window.open('aboutus.html', '_blank')">자세히 보기</button>
+  </section>
+
+  <div class="box"></div>
+
+  <a href="#feedback">
+    <button class="section-divider-btn">↓</button>
+  </a>
+
+  <div class="box"></div>
+
+  <section class="section" id="feedback">
+    <h2>피드백</h2>
+    <p>더 나은 서비스를 위해 여러분의 의견을 들려주세요.</p>
+    <br>
+    <button class="btn" onclick="window.open('feedback.html', '_blank')">피드백 남기기</button>
+  </section>
+
+  <a href="#slider-container">
+    <button class="section-divider-btn">↑</button>
+  </a>
+  <br><br>
+
+  <footer>
+    <h2>소식을 받아보세요</h2>
+    <p>자연과 커피의 감성을 뉴스레터로 전해드립니다.</p>
+    <form>
+      <input type="email" placeholder="이메일 주소 입력" />
+      <button type="submit">구독하기</button>
+    </form>
+    <div class="socials">
+      <img src="https://i.postimg.cc/FH4w1PPH/kakao-talk-4494617.png">ㅤ</a>
+      <img src="https://i.postimg.cc/nc76F8GW/Youtube-logo.png">ㅤ</a>
+      <img src="https://i.postimg.cc/YCzZF1Vf/20250604182653-removebg-preview.png">ㅤ</a>
+    </div>
+    <p>&copy; 2025 CAFE : TERRA</p>
+  </footer>
+
+</body>
+
+</html>

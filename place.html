@@ -1,0 +1,619 @@
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>CAFE : TERRA - Place</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jua&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dongle&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <style>
+    .cafe-heading {
+      font-family: 'Gamja Flower', cursive;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8f5f2;
+      color: #3e2c1c;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #4b3f2f;
+    }
+
+    header h1:hover {
+      color: #7b5e3d;
+    }
+
+
+    header a {
+      text-decoration: none;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #4b3f2f;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #7b5e3d;
+    }
+
+    .container {
+      padding: 40px;
+    }
+
+    .seoulmap {
+      width: 500px;
+      height: 450px;
+      background-color: #f8f5f2;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .highlight-orange {
+      color: orange;
+    }
+
+    .map-container {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .district-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .district-grid a {
+      text-decoration: none;
+      color: #3e2c1c;
+    }
+
+    .district {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .district h3 {
+      font-family: 'Jua', cursive;
+      margin-bottom: 10px;
+      font-size: 25px;
+      font-weight: bold;
+      background: linear-gradient(to right, #2c6b2f, #6dbf3d);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slideInText 0.5s ease-out forwards;
+    }
+
+    @keyframes slideInText {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes wobble {
+
+      0%,
+      100% {
+        transform: translateX(0%);
+      }
+
+      15% {
+        transform: translateX(-25%) rotate(-5deg);
+      }
+
+      30% {
+        transform: translateX(20%) rotate(3deg);
+      }
+
+      45% {
+        transform: translateX(-15%) rotate(-3deg);
+      }
+
+      60% {
+        transform: translateX(10%) rotate(2deg);
+      }
+
+      75% {
+        transform: translateX(-5%) rotate(-1deg);
+      }
+    }
+
+    .header-center {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      width: 300px;
+      margin: 0 auto;
+      transform: translateX(70px);
+    }
+
+    .header-center span {
+      font-size: 15px;
+      animation: wobble 5s ease infinite;
+    }
+
+
+    .header-center span:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .header-center span:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    .header-center span:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    .header-center span:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+
+    .header-center span:nth-child(5) {
+      animation-delay: 1.2s;
+    }
+
+    .header-center span:nth-child(6) {
+      animation-delay: 1.5s;
+    }
+
+    .header-center span:nth-child(7) {
+      animation-delay: 1.5s;
+    }
+
+    .district ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .district ul li {
+      font-family: 'Dongle', sans-serif;
+      font-size: 26px;
+    }
+
+    .district li {
+      margin-bottom: 6px;
+    }
+
+    .district li::before {
+      content: '🍮';
+      margin-right: 8px;
+    }
+
+    .district li.coffee-beans::before {
+      content: '🥤';
+      margin-right: 8px;
+    }
+
+    .district li.bubble-tea::before {
+      content: '☕';
+      margin-right: 8px;
+    }
+
+    .district-1 {
+      border: 2px solid #FFB3BA;
+    }
+
+    .district-2 {
+      border: 2px solid #FFDFBA;
+    }
+
+    .district-3 {
+      border: 2px solid #FFFFBA;
+    }
+
+    .district-4 {
+      border: 2px solid #BAFFC9;
+    }
+
+    .district-5 {
+      border: 2px solid #BAE1FF;
+    }
+
+    .district-6 {
+      border: 2px solid #D7BAFF;
+    }
+
+    .district-7 {
+      border: 2px solid #FFC3E6;
+    }
+
+    .district-8 {
+      border: 2px solid #FFD8B1;
+    }
+
+    .district-9 {
+      border: 2px solid #FFFACD;
+    }
+
+    .district-10 {
+      border: 2px solid #C1FFD7;
+    }
+
+    .district-11 {
+      border: 2px solid #A7C7E7;
+    }
+
+    .district-12 {
+      border: 2px solid #D0B0FF;
+    }
+
+    .district-13 {
+      border: 2px solid #FF9AA2;
+    }
+
+    .district-14 {
+      border: 2px solid #FFB347;
+    }
+
+    .district-15 {
+      border: 2px solid #FFFF66;
+    }
+
+    .district-16 {
+      border: 2px solid #77DD77;
+    }
+
+    .district-17 {
+      border: 2px solid #AEC6CF;
+    }
+
+    .district-18 {
+      border: 2px solid #CBAACB;
+    }
+
+    .district-19 {
+      border: 2px solid #F49AC2;
+    }
+
+    .district-20 {
+      border: 2px solid #FF6961;
+    }
+
+    .district-21 {
+      border: 2px solid #CB99C9;
+    }
+
+    .district-22 {
+      border: 2px solid #B0E0E6;
+    }
+
+    .district-23 {
+      border: 2px solid #FFD1DC;
+    }
+
+    .district-24 {
+      border: 2px solid #C1E1C1;
+    }
+
+    .district-25 {
+      border: 2px solid #F7CAC9;
+    }
+  </style>
+  </link>
+</head>
+
+<body>
+  <header>
+    <a href="메인페이지.html">
+      <h1>CAFE : TERRA</h1>
+    </a>
+    <div class="header-center">
+      <span>🍓</span>
+      <span>🍩</span>
+      <span>🌈</span>
+      <span>🧁</span>
+      <span>🍦</span>
+      <span>🍫</span>
+      <span>💗</span>
+      <span>🍬</span>
+      <span>🧃</span>
+      <span>🍯</span>
+      <span>🌷</span>
+      <span>🍋</span>
+      <span>🍨</span>
+      <span>🍭</span>
+      <span>🍪</span>
+    </div>
+    <nav>
+      <a href="place.html">Place</a>
+      <a href="menu.html">Menu</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h2 class="cafe-heading">🍵 서울 지역별 <span class="highlight-orange">카페</span> 소개 🍰</h2>
+    <div class="map-container">
+      <img alt="서울 지도" class="seoulmap" src="https://i.postimg.cc/NF4rFnYp/image.png" width="80%" />
+    </div>
+    <div class="district-grid">
+      <a href="지역구/서초구.html">
+        <div class="district district-1">
+          <h3>서초구</h3>
+          <ul>
+            <li>카페 이로</li>
+            <li class="coffee-beans">리플렉트커피</li>
+            <li class="bubble-tea">미니말레 커피뢰스터</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/성동구.html">
+        <div class="district district-2">
+          <h3>성동구</h3>
+          <ul>
+            <li>비도커피</li>
+            <li class="coffee-beans">카페 에빠빠</li>
+            <li class="bubble-tea">카페&amp;펍 연무장</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/서대문구.html">
+        <div class="district district-3">
+          <h3>서대문구</h3>
+          <ul>
+            <li>스웨이커피스테이션</li>
+            <li class="coffee-beans">카페 잘루</li>
+            <li class="bubble-tea">카페 폭포</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/구로구.html">
+        <div class="district district-4">
+          <h3>구로구</h3>
+          <ul>
+            <li>예커피</li>
+            <li class="coffee-beans">구로평상</li>
+            <li class="bubble-tea">사사커피lab</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/성북구.html">
+        <div class="district district-5">
+          <h3>성북구</h3>
+          <ul>
+            <li>오버스토리</li>
+            <li class="coffee-beans">Moture</li>
+            <li class="bubble-tea">유목커피바</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/송파구.html">
+        <div class="district district-6">
+          <h3>송파구</h3>
+          <ul>
+            <li>코히루</li>
+            <li class="coffee-beans">카페 봉땅</li>
+            <li class="bubble-tea">뷰클런즈</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/마포구.html">
+        <div class="district district-7">
+          <h3>마포구</h3>
+          <ul>
+            <li>그로토</li>
+            <li class="coffee-beans">채그로</li>
+            <li class="bubble-tea">프리츠 도화점</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/도봉구.html">
+        <div class="district district-8">
+          <h3>도봉구</h3>
+          <ul>
+            <li>엉클두</li>
+            <li class="coffee-beans">유영정원</li>
+            <li class="bubble-tea">티하우스다드림</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/노원구.html">
+        <div class="district district-9">
+          <h3>노원구</h3>
+          <ul>
+            <li>감각</li>
+            <li class="coffee-beans">무이로커피</li>
+            <li class="bubble-tea">카페 기차가 있는 풍경</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/강북구.html">
+        <div class="district district-10">
+          <h3>강북구</h3>
+          <ul>
+            <li>카페 산아래</li>
+            <li class="coffee-beans">하이그라운드 제빵소</li>
+            <li class="bubble-tea">전광수커피하우스 북한산점</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/은평구.html">
+        <div class="district district-11">
+          <h3>은평구</h3>
+          <ul>
+            <li>카페애인</li>
+            <li class="coffee-beans">근린커피</li>
+            <li class="bubble-tea">카페씬카페</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/종로구.html">
+        <div class="district district-12">
+          <h3>종로구</h3>
+          <ul>
+            <li>카페 오월</li>
+            <li class="coffee-beans">카페 온더플랜</li>
+            <li class="bubble-tea">카페 슬로우파크</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/중랑구.html">
+        <div class="district district-13">
+          <h3>중랑구</h3>
+          <ul>
+            <li>카페 브릭</li>
+            <li class="coffee-beans">카페 단조</li>
+            <li class="bubble-tea">카페 디오리진</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/동대문구.html">
+        <div class="district district-14">
+          <h3>동대문구</h3>
+          <ul>
+            <li>카페청량</li>
+            <li class="coffee-beans">쿄우커피</li>
+            <li class="bubble-tea">너디블루</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/중구.html">
+        <div class="district district-15">
+          <h3>중구</h3>
+          <ul>
+            <li>카페 사루</li>
+            <li class="coffee-beans">카페 드 리옹</li>
+            <li class="bubble-tea">더 스팟 패뷸러스</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/용산구.html">
+        <div class="district district-16">
+          <h3>용산구</h3>
+          <ul>
+            <li>카페 노티드</li>
+            <li class="coffee-beans">카페 어니언</li>
+            <li class="bubble-tea">카페 모노폴리</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/광진구.html">
+        <div class="district district-17">
+          <h3>광진구</h3>
+          <ul>
+            <li>모츠커피</li>
+            <li class="coffee-beans">커피마켓</li>
+            <li class="bubble-tea">푸쉬커피</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/강서구.html">
+        <div class="district district-18">
+          <h3>강서구</h3>
+          <ul>
+            <li>오프레스트</li>
+            <li class="coffee-beans">어나더사이드</li>
+            <li class="bubble-tea">커피볶는곤이네집</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/양천구.html">
+        <div class="district district-19">
+          <h3>양천구</h3>
+          <ul>
+            <li>카페 히든</li>
+            <li class="coffee-beans">카페게이트</li>
+            <li class="bubble-tea">카페 Qooom</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/동작구.html">
+        <div class="district district-20">
+          <h3>동작구</h3>
+          <ul>
+            <li>딥다이브</li>
+            <li class="coffee-beans">파세로 에스프레소</li>
+            <li class="bubble-tea">잔디 속에 있다고 상상을 해</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/금천구.html">
+        <div class="district district-21">
+          <h3>금천구</h3>
+          <ul>
+            <li>아로케</li>
+            <li class="coffee-beans">원두서점</li>
+            <li class="bubble-tea">메종크로키</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/관악구.html">
+        <div class="district district-22">
+          <h3>관악구</h3>
+          <ul>
+            <li>안밀</li>
+            <li class="coffee-beans">폼앤노말</li>
+            <li class="bubble-tea">발루토커피 신림점</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/강남구.html">
+        <div class="district district-23">
+          <h3>강남구</h3>
+          <ul>
+            <li>카페 정월</li>
+            <li class="coffee-beans">카페 알베르</li>
+            <li class="bubble-tea">셀렉티드닉스 강남역점</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/강남구.html">
+        <div class="district district-24">
+          <h3>강남구</h3>
+          <ul>
+            <li>카페 모리</li>
+            <li class="coffee-beans">카페 드리브</li>
+            <li class="bubble-tea">카페 버킷리스트</li>
+          </ul>
+        </div>
+      </a>
+      <a href="지역구/한강.html">
+        <div class="district district-25">
+          <h3>한강</h3>
+          <ul>
+            <li>카페 진정성</li>
+          </ul>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

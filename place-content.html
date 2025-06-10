@@ -1,0 +1,591 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: rgba(238, 238, 238, 0.867);
+        }
+
+        #seoulmap {
+            position: relative;
+            width: 90%;
+            height: 90%
+        }
+
+        #seoulmap>img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: opacity(100) drop-shadow(0 0 0 #983300);
+            z-index: -1;
+        }
+
+        #gangnam {
+            position: absolute;
+            left: 68%;
+            top: 80%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #gangnam>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #gangnam>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #junglang {
+            position: absolute;
+            left: 77%;
+            top: 43%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #junglang>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #junglang>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #c1 {
+            position: absolute;
+            left: 77%;
+            top: 43%;
+            width: 2.5%;
+            z-index: 1;
+            width: 5%;
+            height: auto;
+        }
+
+        #koreariver {
+            position: absolute;
+            left: 50%;
+            top: 69%;
+            width: 1%;
+            z-index: 1;
+        }
+
+        #koreariver>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #koreariver>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #gangsu {
+            position: absolute;
+            left: 11.5%;
+            top: 53%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #gangsu>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #gangsu>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #gangdong {
+            position: absolute;
+            left: 89.5%;
+            top: 58%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #gangdong>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #gangdong>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #gangbuk {
+            position: absolute;
+            left: 57%;
+            top: 27%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #gangbuk>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #gangbuk>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #jong {
+            position: absolute;
+            left: 50%;
+            top: 46%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #jong>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #jong>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #gwanak {
+            position: absolute;
+            left: 41%;
+            top: 88%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #gwanak>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #gwanak>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #yangchun {
+            position: absolute;
+            left: 23%;
+            top: 66%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #yangchun>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #yangchun>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #sudae {
+            position: absolute;
+            left: 40%;
+            top: 48%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #sudae>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #sudae>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #yeongpo {
+            position: absolute;
+            left: 30%;
+            top: 70%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #yeongpo>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #yeongpo>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #guro {
+            position: absolute;
+            left: 15%;
+            top: 75%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #guro>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #guro>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #nowon {
+            position: absolute;
+            left: 72.5%;
+            top: 25%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #nowon>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #nowon>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #sungbuk {
+            position: absolute;
+            left: 58%;
+            top: 42%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #sungbuk>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #sungbuk>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #gumchun {
+            position: absolute;
+            left: 30%;
+            top: 85%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #gumchun>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #gumchun>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #mapo {
+            position: absolute;
+            left: 40%;
+            top: 55%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #mapo>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #mapo>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #dongdae {
+            position: absolute;
+            left: 68%;
+            top: 47%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #dongdae>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #dongdae>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #sungdong {
+            position: absolute;
+            left: 63.5%;
+            top: 57%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #sungdong>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #sungdong>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #junggu {
+            position: absolute;
+            left: 47%;
+            top: 51%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #junggu>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #junggu>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #gwanjin {
+            position: absolute;
+            left: 74%;
+            top: 58%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #gwanjin>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #gwanjin>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #songpa {
+            position: absolute;
+            left: 80%;
+            top: 73%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #songpa>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #songpa>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #dobong {
+            position: absolute;
+            left: 62%;
+            top: 18%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #dobong>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #dobong>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #dongjak {
+            position: absolute;
+            left: 46%;
+            top: 73%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #dongjak>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #dongjak>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #sucho {
+            position: absolute;
+            left: 55%;
+            top: 80%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #sucho>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #sucho>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #dragonmountain {
+            position: absolute;
+            left: 48.5%;
+            top: 62%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #dragonmountain>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #dragonmountain>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+
+        #silver {
+            position: absolute;
+            left: 38%;
+            top: 35%;
+            width: 2.5%;
+            z-index: 1;
+        }
+
+        #silver>img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 0 #983300);
+            transition: filter 0.3s;
+            z-index: 1;
+        }
+
+        #silver>img:hover {
+            filter: hue-rotate(0deg) saturate(500%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="seoulmap">
+        <a id="gangnam" href="지역구/강남구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="junglang" href="지역구/중랑구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="koreariver" href="지역구/한강.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="gangdong" href="지역구/강동구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="gangbuk" href="지역구/강북구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="gangsu" href="지역구/강서구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="gwanak" href="지역구/관악구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="gwanjin" href="지역구/광진구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="guro" href="지역구/구로구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="gumchun" href="지역구/금천구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="nowon" href="지역구/노원구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="dobong" href="지역구/도봉구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="dongdae" href="지역구/동대문구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="dongjak" href="지역구/동작구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="mapo" href="지역구/마포구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="sudae" href="지역구/서대문구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="sucho" href="지역구/서초구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="sungdong" href="지역구/성동구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="sungbuk" href="지역구/성북구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="songpa" href="지역구/송파구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="yangchun" href="지역구/양천구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="yeongpo" href="지역구/영등포.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="dragonmountain" href="지역구/용산구.html" target="_blank"><img
+                src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="silver" href="지역구/은평구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="jong" href="지역구/종로구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <a id="junggu" href="지역구/중구.html" target="_blank"><img src="https://i.postimg.cc/HLctnkkL/coffee.gif"></a>
+        <img src="https://i.postimg.cc/Gmx0qfpJ/image.png">
+    </div>
+
+</body>
+
+</html>
